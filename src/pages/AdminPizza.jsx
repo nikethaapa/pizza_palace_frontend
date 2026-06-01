@@ -14,7 +14,7 @@ function AdminPizza() {
     async function fetchPizzas() {
 
         const response = await axios.get(
-            "http://localhost:5000/api/pizza/all"
+            "https://pizza-palace-backend-qi5u.onrender.com/api/order/all"
         );
 
         setPizzas(response.data);
@@ -23,7 +23,7 @@ function AdminPizza() {
     async function deletePizza(id) {
 
         await axios.delete(
-            `http://localhost:5000/api/pizza/${id}`
+            `https://pizza-palace-backend-qi5u.onrender.com/api/pizza/${id}`
         );
 
         fetchPizzas();

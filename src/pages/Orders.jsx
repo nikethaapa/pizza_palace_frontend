@@ -17,7 +17,7 @@ function Orders() {
       console.log("TOKEN =", token);
 
       const response = await axios.get(
-        "http://localhost:5000/api/order/myorders",
+        "https://pizza-palace-backend-qi5u.onrender.com/api/order/myorders",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -39,7 +39,7 @@ function Orders() {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:5000/api/order/cancel/${id}`,
+        `https://pizza-palace-backend-qi5u.onrender.com/api/order/cancel/:id`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

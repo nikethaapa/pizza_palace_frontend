@@ -29,7 +29,7 @@ function Home() {
         try {
 
             const response = await axios.get(
-                "http://localhost:5000/api/pizza/all"
+                "https://pizza-palace-backend-qi5u.onrender.com/api/pizza/all"
             );
 
             setPizzas(response.data);

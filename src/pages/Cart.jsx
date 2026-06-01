@@ -52,7 +52,7 @@ function Cart() {
       );
 
       const response = await axios.post(
-        "http://localhost:5000/api/order/place",
+        "https://pizza-palace-backend-qi5u.onrender.com/api/order/place",
         {
           items: cart,
           totalAmount,

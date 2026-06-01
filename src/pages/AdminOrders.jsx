@@ -22,7 +22,7 @@ function AdminOrders() {
 
             const response = await axios.get(
 
-                "http://localhost:5000/api/order/all",
+                "https://pizza-palace-backend-qi5u.onrender.com/api/order/all",
 
                 {
                     headers: {
@@ -60,7 +60,7 @@ function AdminOrders() {
 
             const response = await axios.put(
 
-                `http://localhost:5000/api/order/status/${id}`,
+                `https://pizza-palace-backend-qi5u.onrender.com/api/order/status/:id`,
 
                 { status },
 

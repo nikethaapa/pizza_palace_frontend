@@ -134,7 +134,7 @@ function AdminOrders() {
                         </div>
                         <div className="mb-2">
                             <span className="text-gray-600">User Email:</span>
-                            <p className="font-medium">{order.user?.email}</p>
+                            <p className="font-medium">{order.user ? order.user.email : "No user found"}</p>
                         </div>
 
                         <div className="flex justify-between mb-2">

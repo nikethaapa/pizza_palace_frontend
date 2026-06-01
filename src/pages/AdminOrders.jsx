@@ -52,40 +52,27 @@ function AdminOrders() {
     }
 
     async function updateStatus(id, status) {
+    try {
+        const token = localStorage.getItem("token");
 
-        try {
-
-            const token =
-                localStorage.getItem("token");
-
-            const response = await axios.put(
-
-                `https://pizza-palace-backend-qi5u.onrender.com/api/order/status/${id}`,
-
-                { status },
-
-                {
-                    headers: {
-                        Authorization:
-                            `Bearer ${token}`
-                    }
+        const response = await axios.put(
+            `https://pizza-palace-backend-qi5u.onrender.com/api/order/status/${id}`,
+            { status },
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`
                 }
+            }
+        );
 
-            );
+        alert(response.data.message);
+        fetchOrders();
 
-            alert(response.data.message);
-
-            fetchOrders();
-
-        } catch (err) {
-
-            console.log(err);
-
-            alert("Update Failed");
-
-        }
-
+    } catch (err) {
+        console.log(err);
+        alert("Update Failed");
     }
+}
     function handleLogout() {
         localStorage.removeItem("token");
         localStorage.removeItem("role");

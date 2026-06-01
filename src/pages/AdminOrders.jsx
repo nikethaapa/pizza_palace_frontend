@@ -52,27 +52,27 @@ function AdminOrders() {
     }
 
     async function updateStatus(id, status) {
-    try {
-        const token = localStorage.getItem("token");
+        try {
+            const token = localStorage.getItem("token");
 
-        const response = await axios.put(
-            `https://pizza-palace-backend-qi5u.onrender.com/api/order/status/${id}`,
-            { status },
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`
+            const response = await axios.put(
+                `https://pizza-palace-backend-qi5u.onrender.com/api/order/status/${id}`,
+                { status },
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
                 }
-            }
-        );
+            );
 
-        alert(response.data.message);
-        fetchOrders();
+            alert(response.data.message);
+            fetchOrders();
 
-    } catch (err) {
-        console.log(err);
-        alert("Update Failed");
+        } catch (err) {
+            console.log(err);
+            alert("Update Failed");
+        }
     }
-}
     function handleLogout() {
         localStorage.removeItem("token");
         localStorage.removeItem("role");
@@ -130,6 +130,10 @@ function AdminOrders() {
                             <p className="font-bold text-gray-800 break-all">
                                 {order._id}
                             </p>
+                        </div>
+                        <div className="mb-2">
+                            <span className="text-gray-600">User Email:</span>
+                            <p className="font-medium">{order.user?.email}</p>
                         </div>
 
                         <div className="flex justify-between mb-2">

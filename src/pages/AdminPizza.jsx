@@ -14,7 +14,7 @@ function AdminPizza() {
     async function fetchPizzas() {
 
         const response = await axios.get(
-            "https://pizza-palace-backend-qi5u.onrender.com/api/order/all"
+            "https://pizza-palace-backend-qi5u.onrender.com/api/pizza/all"
         );
 
         setPizzas(response.data);

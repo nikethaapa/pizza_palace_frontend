@@ -60,7 +60,7 @@ function AdminOrders() {
 
             const response = await axios.put(
 
-                `https://pizza-palace-backend-qi5u.onrender.com/api/order/status/:id`,
+                `https://pizza-palace-backend-qi5u.onrender.com/api/order/status/${id}`,
 
                 { status },
 
@@ -96,12 +96,12 @@ function AdminOrders() {
         <div className="min-h-screen bg-gradient-to-br from-gray-100 via-orange-50 to-gray-200 p-6">
 
             {/* Header */}
-           <div className="bg-orange-600 text-white px-6 py-4 shadow-md flex flex-col md:flex-row items-center justify-between gap-3">
+            <div className="bg-orange-600 text-white px-6 py-4 shadow-md flex flex-col md:flex-row items-center justify-between gap-3">
 
                 {/* Title */}
                 <h1 className="text-2xl md:text-3xl font-bold  md:text-left">
-        🍕 The Pizza Palace
-    </h1>
+                    🍕 The Pizza Palace
+                </h1>
 
                 {/* Button */}
                 <div className="flex gap-1">

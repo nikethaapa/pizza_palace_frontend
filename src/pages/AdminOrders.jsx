@@ -7,6 +7,7 @@ function AdminOrders() {
     const [orders, setorders] = useState([]);
     const navigate = useNavigate();
 
+    
     useEffect(() => {
 
         fetchOrders();

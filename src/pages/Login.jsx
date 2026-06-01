@@ -24,7 +24,7 @@ function Login() {
 
         try {
             const response = await axios.post(
-                "http://localhost:5000/api/auth/login",
+                "https://pizza-palace-backend-qi5u.onrender.com/api/auth/login",
                 user
             );
 

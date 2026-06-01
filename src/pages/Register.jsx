@@ -13,7 +13,7 @@ function Register(){
     async function handlesubmit(e) {
         e.preventDefault()
         try{
-            const response=await axios.post("http://localhost:5000/api/auth/register",
+            const response=await axios.post("https://pizza-palace-backend-qi5u.onrender.com/api/auth/register",
                 user)
             alert(response.data.message)
             navigate("/login")

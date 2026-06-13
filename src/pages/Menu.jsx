@@ -107,7 +107,7 @@ function Menu() {
               <button
                 className="text-left hover:text-[#E67E22]"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/home");
                   setOpen(false);
                 }}
               >

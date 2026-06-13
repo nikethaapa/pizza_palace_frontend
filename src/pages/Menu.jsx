@@ -47,7 +47,7 @@ function Menu() {
           <ul className="hidden md:flex gap-6 font-medium items-center">
             <li
               className="cursor-pointer hover:text-[#E67E22]"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/home")}
             >
               Home
             </li>

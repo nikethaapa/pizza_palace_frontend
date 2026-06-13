@@ -144,7 +144,7 @@ function Cart() {
             </div>
 
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/home")}
               className="bg-orange-600 text-white px-6 py-3 rounded-lg"
             >
               Back to Home 🍕

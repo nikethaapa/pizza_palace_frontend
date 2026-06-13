@@ -48,7 +48,7 @@ function Profile() {
 
         <div className="flex gap-3">
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             className="bg-white text-orange-600 px-4 py-2 rounded-lg font-semibold"
           >
             Home
